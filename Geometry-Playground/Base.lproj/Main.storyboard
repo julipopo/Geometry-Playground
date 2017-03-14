@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lxb-jS-Zk9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8cN-tk-eiD">
+            <objects>
+                <viewController id="lxb-jS-Zk9" customClass="ViewController" customModule="Geometry_Playground" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W8z-V5-dPm"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fY-P1-EYs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sag-Ha-2MG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ED-Vz-9Yk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxe-tV-vHO" customClass="GridView" customModule="Geometry_Playground" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="10000" height="10000"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10000" id="WI9-9n-b3E"/>
+                                            <constraint firstAttribute="width" constant="10000" id="k05-c2-obb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xxe-tV-vHO" firstAttribute="leading" secondItem="8ED-Vz-9Yk" secondAttribute="leading" id="31F-J7-sf9"/>
+                                    <constraint firstItem="Xxe-tV-vHO" firstAttribute="top" secondItem="8ED-Vz-9Yk" secondAttribute="top" id="E9h-NH-gVW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xxe-tV-vHO" secondAttribute="trailing" id="KYO-6n-2dW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xxe-tV-vHO" secondAttribute="bottom" id="jJ7-xE-zdj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="Xxe-tV-vHO" id="Jxm-dq-adT"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifa-ml-1wV">
+                                <rect key="frame" x="213" y="611" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="startAnimation:" destination="lxb-jS-Zk9" eventType="touchUpInside" id="7qs-N2-gmf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cw-Hc-6UL">
+                                <rect key="frame" x="128" y="611" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetAnimation:" destination="lxb-jS-Zk9" eventType="touchUpInside" id="K5W-5r-V61"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ED-Vz-9Yk" firstAttribute="leading" secondItem="Sag-Ha-2MG" secondAttribute="leading" id="DDq-Vd-8E3"/>
+                            <constraint firstItem="0fY-P1-EYs" firstAttribute="top" secondItem="Ifa-ml-1wV" secondAttribute="bottom" constant="26" id="Su5-lg-90W"/>
+                            <constraint firstAttribute="trailing" secondItem="8ED-Vz-9Yk" secondAttribute="trailing" id="ZeZ-wx-hyb"/>
+                            <constraint firstItem="Ifa-ml-1wV" firstAttribute="centerX" secondItem="Sag-Ha-2MG" secondAttribute="centerX" constant="40" id="bp9-aK-SlW"/>
+                            <constraint firstItem="1cw-Hc-6UL" firstAttribute="centerX" secondItem="Sag-Ha-2MG" secondAttribute="centerX" constant="-40" id="oHG-mY-5di"/>
+                            <constraint firstItem="0fY-P1-EYs" firstAttribute="top" secondItem="8ED-Vz-9Yk" secondAttribute="bottom" id="qog-mR-hOE"/>
+                            <constraint firstItem="8ED-Vz-9Yk" firstAttribute="top" secondItem="Sag-Ha-2MG" secondAttribute="top" id="tCG-mt-0m8"/>
+                            <constraint firstItem="0fY-P1-EYs" firstAttribute="top" secondItem="1cw-Hc-6UL" secondAttribute="bottom" constant="26" id="xdO-3K-ww0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gridView" destination="Xxe-tV-vHO" id="yMf-xd-D44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6q5-2W-Wld" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.75" y="34.859154929577464"/>
+        </scene>
+    </scenes>
+</document>
