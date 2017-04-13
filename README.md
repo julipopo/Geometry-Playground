@@ -5,7 +5,7 @@
 
 A playground application to try out your layer/view animations etc..
 
-![Alt text](screenshot.png?raw=true "Screenshot")
+<img src="/screenshot.gif" width="300px">
 
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
